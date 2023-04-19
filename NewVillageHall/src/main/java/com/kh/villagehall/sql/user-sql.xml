@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>user-sql.xml</comment>
+	
+	<!-- 로그인  -->
+	<entry key="login">
+		SELECT USER_NO, USER_EMAIL, USER_NICKNAME, USER_TEL, 
+		TO_CHAR(ENROLL_DATE, 'YYYY-MM-DD HH24:MI:SS') AS ENROLL_DATE, PROFILE_IMG, KAKAO_USER_KEY, ADMINISTER
+		FROM "USER"
+		WHERE USER_EMAIL = ?
+		AND USER_PW = ?
+		AND USER_DELETE_FG = 'N'
+	</entry>
+	
+	<!-- 카카오 로그인  -->
+	<entry key="kakaoLogin">
+		SELECT USER_NO, USER_EMAIL, USER_NICKNAME, USER_TEL, 
+		TO_CHAR(ENROLL_DATE, 'YYYY-MM-DD HH24:MI:SS') AS ENROLL_DATE, PROFILE_IMG, KAKAO_USER_KEY, ADMINISTER
+		FROM "USER"
+		WHERE KAKAO_USER_KEY = ?
+		AND USER_DELETE_FG = 'N'
+	</entry>
+	
+	
+   <!-- 회원가입 -->
+   <entry key="signUp">
+      INSERT INTO "USER"(USER_EMAIL, USER_PW, USER_NICKNAME, USER_TEL,ENROLL_DATE, PROFILE_IMG,KAKAO_USER_KEY,USER_DELETE_FG,ADMINISTER)
+      VALUES(?, ? , ? , ? , DEFAULT, NULL, NULL, DEFAULT, DEFAULT)   
+   </entry>
+   
+   <!-- 카카오회원가입 -->
+    <entry key="kakaoSignUp">
+  	  INSERT INTO "USER"(USER_EMAIL, USER_PW, USER_NICKNAME, USER_TEL,ENROLL_DATE, PROFILE_IMG,KAKAO_USER_KEY,USER_DELETE_FG,ADMINISTER) 
+      VALUES(?, ? , ? , NULL , DEFAULT, NULL, ? , DEFAULT, DEFAULT)
+   </entry>
+   
+   
+   <!-- 인증번호 생성 -->
+   <entry key="insertCertification">
+      INSERT INTO CERTIFICATION VALUES(?, ?, SYSDATE)
+   </entry>
+   
+      <!-- 인증번호 수정 -->
+   <entry key="updateCertification">
+      UPDATE CERTIFICATION SET
+      CODE_NUMBER = ?,
+      ISSUE_DT = SYSDATE
+      WHERE EMAIL = ?
+   </entry>
+   
+      <!-- 인증번호 확인  -->
+   <entry key="checkNumber">
+      SELECT 
+         CASE WHEN (SELECT '1' FROM CERTIFICATION
+                  WHERE EMAIL = ?
+                  AND CODE_NUMBER = ?)  = 1
+         
+            THEN NVL( (SELECT '1' FROM CERTIFICATION
+                  WHERE EMAIL = ?
+                  AND ISSUE_DT + (INTERVAL '5' MINUTE) >= SYSDATE) , '2') 
+      
+            ELSE '3'   
+         END         
+      FROM DUAL
+   </entry>
+   
+      <!-- 이메일 중복 검사 -->
+   <entry key="emailDupCheck">
+      SELECT COUNT(*) FROM "USER" 
+      WHERE USER_EMAIL = ? 
+      AND USER_DELETE_FG = 'N' 
+   </entry>
+   
+   	<!-- 닉네임 중복 검사 -->
+	<entry key="nicknameDupCheck">
+		SELECT COUNT(*) FROM "USER" 
+		WHERE USER_NICKNAME= ? 
+		AND USER_DELETE_FG = 'N' 
+	</entry>
+   
+	
+	<!-- 마이페이지 비밀번호 일치 검사 -->
+	<entry key="myInfoCheckPw">
+		SELECT COUNT(*) 
+		FROM "USER" 
+		WHERE USER_DELETE_FG = 'N' 
+		AND USER_NO = ? 
+		AND USER_PW = ?
+	</entry>
+	
+		
+	<!-- 프로필 이미지 변경 -->
+	<entry key="updateProfileImage">
+		UPDATE "USER" SET
+		PROFILE_IMG = ?
+		WHERE USER_NO = ? 
+		AND USER_DELETE_FG = 'N' 
+	</entry>
+	
+	<!-- 회원 정보 변경(닉네임) -->
+	<entry key="updateUserNickname">
+		UPDATE "USER" SET 
+		USER_NICKNAME = ? 
+		WHERE USER_NO = ? 
+		AND USER_DELETE_FG = 'N' 
+	</entry>
+	
+	<!-- 회원 정보 변경(전화번호) -->
+	<entry key="updateUserTel">
+		UPDATE "USER" SET 
+		USER_TEL = ? 
+		WHERE USER_NO = ? 
+		AND USER_DELETE_FG = 'N' 
+	</entry>
+	
+	<!-- 회원 정보 변경(닉네임,전화번호) -->
+	<entry key="updateUser">
+		UPDATE "USER" SET 
+		USER_NICKNAME = ?, 
+		USER_TEL = ? 
+		WHERE USER_NO = ? 
+		AND USER_DELETE_FG = 'N' 
+	</entry>
+	
+	
+	
+	
+	<!-- 비밀번호 변경 -->
+	<entry key="changePw">
+		UPDATE "USER" SET 
+		USER_PW = ? 
+		WHERE USER_NO = ? 
+	</entry>
+	
+	
+	<!-- 회원탈퇴 -->
+	<entry key="deleteUser">
+		UPDATE "USER" SET 
+		USER_DELETE_FG = 'Y' 
+		WHERE USER_NO = ? 
+		AND USER_PW = ? 
+	</entry>
+	
+	<entry key="deleteKakaoUser">
+		UPDATE "USER" SET 
+		USER_DELETE_FG = 'Y' 
+		WHERE USER_NO = ? 
+		AND KAKAO_USER_KEY = ? 
+	</entry>
+	
+	
+	
+	<!-- 비밀번호 찾기 -->
+	<entry key="pwFind">
+		UPDATE "USER" SET 
+		USER_PW = ? 
+		WHERE USER_EMAIL = ? 
+	</entry>
+	
+	<!-- 마이인포 닉네임 수정  -->
+	<entry key="myinfoNicknameDupCheck">
+		SELECT COUNT(*) FROM "USER" 
+		WHERE USER_NICKNAME= ? 
+		AND USER_DELETE_FG = 'N' 
+	</entry>
+	
+
+	
+	
+	
+
+	
+	
+</properties>
