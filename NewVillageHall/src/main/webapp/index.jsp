@@ -15,7 +15,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="${contextPath}/resources/images/favicon.png" rel="icon">
+  <link href="${contextPath}/resources/images/logo.png" rel="icon">
   <link href="${contextPath}/resources/images/apple-touch-icon.png" rel="apple-touch-icon">
 
 
@@ -81,8 +81,8 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       	  </a>
           <p></p>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started">시작하기</a>
-            <a href="#about" class="glightbox btn-watch-video d-flex align-items-center"><span>이웃주민 되기 </span><i class="fa-solid fa-user-plus"></i></a>
+            <a href="${contextPath}/user/login" class="btn-get-started">시작하기</a>
+            <a href="${contextPath}/user/termsOfUse" class="glightbox btn-watch-video d-flex align-items-center"><span>이웃주민 되기 </span><i class="fa-solid fa-user-plus"></i></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2">

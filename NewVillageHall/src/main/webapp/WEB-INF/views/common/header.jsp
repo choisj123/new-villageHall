@@ -32,11 +32,11 @@
 		<div></div>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">홈</a></li>
-          <li><a href="#services">전체</a></li>
-          <li><a href="#portfolio">인기</a></li>
-          <li><a href="#team">공지사항</a></li>
-          <li><a href="blog.html">FAQ</a></li>
+          <li><a href="#map">홈</a></li>
+          <li><a href="${contextPath}/board/list?type=3&categoryNo=0">전체</a></li>
+          <li><a href="${contextPath}/board/popularBoard?sortBy=like">인기</a></li>
+          <li><a href="${contextPath}/board/list?type=1&categoryNo=1">공지사항</a></li>
+          <li><a href="${contextPath}/board/list?type=2&categoryNo=2">FAQ</a></li>
           <li><a href="#about">마을회관</a></li>
         </ul>
       </nav><!-- .navbar -->
