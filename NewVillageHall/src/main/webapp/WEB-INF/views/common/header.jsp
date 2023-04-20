@@ -32,7 +32,7 @@
 		<div></div>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#map">홈</a></li>
+          <li><a href="${contextPath}">홈</a></li>
           <li><a href="${contextPath}/board/list?type=3&categoryNo=0">전체</a></li>
           <li><a href="${contextPath}/board/popularBoard?sortBy=like">인기</a></li>
           <li><a href="${contextPath}/board/list?type=1&categoryNo=1">공지사항</a></li>
