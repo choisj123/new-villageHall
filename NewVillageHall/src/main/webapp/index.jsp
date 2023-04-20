@@ -14,10 +14,6 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 
     <!-- Favicons -->
     <link href="${contextPath}/resources/images/logo.png" rel="icon" />
-    <link
-      href="${contextPath}/resources/images/apple-touch-icon.png"
-      rel="apple-touch-icon"
-    />
 
     <!-- fontawesome -->
     <script
@@ -88,6 +84,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     <section id="hero" class="hero">
       <div class="container position-relative">
         <div class="row gy-5" data-aos="fade-in">
+        
           <div
             class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start"
           >
@@ -98,7 +95,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                 id="home-logo"
               />
             </a>
-            <p></p>
+            <p>메롱</p>
+          </div>
+            
+          <div class="col-lg-6 order-1 order-lg-2 justify-content-end">
             <div class="d-flex justify-content-center justify-content-lg-start">
               <a href="${contextPath}/user/login" class="btn-get-started"
                 >시작하기</a
@@ -109,16 +109,9 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                 ><span>이웃주민 되기 </span><i class="fa-solid fa-user-plus"></i
               ></a>
             </div>
+            
           </div>
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img
-              src="assets/img/hero-img.svg"
-              class="img-fluid"
-              alt=""
-              data-aos="zoom-out"
-              data-aos-delay="100"
-            />
-          </div>
+          
         </div>
       </div>
     </section>

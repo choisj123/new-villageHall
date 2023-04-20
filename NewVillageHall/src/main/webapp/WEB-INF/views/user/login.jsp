@@ -27,6 +27,117 @@
 </head>
 <body>
     <main>
+    
+    	<div id="container" class="container">
+    <!-- FORM SECTION -->
+    <div class="row">
+      <!-- SIGN UP -->
+      <div class="col align-items-center flex-col sign-up">
+        <div class="form-wrapper align-items-center">
+          <div class="form sign-up">
+            <div class="input-group">
+              <i class='bx bxs-user'></i>
+              <input type="text" placeholder="Username">
+            </div>
+            <div class="input-group">
+              <i class='bx bx-mail-send'></i>
+              <input type="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <input type="password" placeholder="Password">
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <input type="password" placeholder="Confirm password">
+            </div>
+            <button>
+              Sign up
+            </button>
+            <p>
+              <span>
+                Already have an account?
+              </span>
+              <b onclick="toggle()" class="pointer">
+                Sign in here
+              </b>
+            </p>
+          </div>
+        </div>
+      
+      </div>
+      <!-- END SIGN UP -->
+      <!-- SIGN IN -->
+      <div class="col align-items-center flex-col sign-in">
+        <div class="form-wrapper align-items-center">
+          <div class="form sign-in">
+            <div class="input-group">
+              <i class='bx bxs-user'></i>
+              <input type="text" placeholder="Username">
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <input type="password" placeholder="Password">
+            </div>
+            <button>
+              Sign in
+            </button>
+            <p>
+              <b>
+                Forgot password?
+              </b>
+            </p>
+            <p>
+              <span>
+                Don't have an account?
+              </span>
+              <b onclick="toggle()" class="pointer">
+                Sign up here
+              </b>
+            </p>
+          </div>
+        </div>
+        <div class="form-wrapper">
+    
+        </div>
+      </div>
+      <!-- END SIGN IN -->
+    </div>
+    <!-- END FORM SECTION -->
+    <!-- CONTENT SECTION -->
+    <div class="row content-row">
+      <!-- SIGN IN CONTENT -->
+      <div class="col align-items-center flex-col">
+        <div class="text sign-in">
+          <h2>
+            Welcome
+          </h2>
+  
+        </div>
+        <div class="img sign-in">
+    
+        </div>
+      </div>
+      <!-- END SIGN IN CONTENT -->
+      <!-- SIGN UP CONTENT -->
+      <div class="col align-items-center flex-col">
+        <div class="img sign-up">
+        
+        </div>
+        <div class="text sign-up">
+          <h2>
+            Join with us
+          </h2>
+  
+        </div>
+      </div>
+      <!-- END SIGN UP CONTENT -->
+    </div>
+    <!-- END CONTENT SECTION -->
+  </div>
+    
+    <%-- 
+    
        
         <!--헤더 영역 시작-->
         <header>
@@ -42,11 +153,11 @@
             <section class="login-content">
            
             
-            	<%-- if - else --%>
+            	if - else
             	<c:choose>  
-            		<%-- choose 내부에는 jsp 주석만 사용 --%>
+            		choose 내부에는 jsp 주석만 사용
             		
-            		<%-- 로그인이 되어있지 않은 경우 --%>
+            		로그인이 되어있지 않은 경우
        				<c:when test="${ empty sessionScope.loginUser}"> 
             		
 		                <form action="login" method="Post" name="login-form" onsubmit="return loginValidate()">
@@ -60,7 +171,7 @@
 		        
 		                        <section>
 		                            <input type="text" id="input-area" name="userEmail" placeholder="아이디(이메일)" value="${cookie.saveId.value}"><br>
-                                                                                                 <%-- 현재 페이지 쿠키 중 "saveId"의 내용을 출력--%>                   
+                                                                                                 현재 페이지 쿠키 중 "saveId"의 내용을 출력                   
 		                            <input type="password" id="input-area" name="userPw" placeholder="비밀번호">
 		                        </section>
 		        
@@ -92,15 +203,15 @@
 		                    </fieldset>
 		                    
 		                 
-                            <%-- 쿠키에 saveId가 있는 경우--%>
+                            쿠키에 saveId가 있는 경우
                             <c:if test="${ !empty cookie.saveId.value}">
 
-                                <%-- chk 변수 생성(page scope)--%>
+                                chk 변수 생성(page scope)
                                 <c:set var="chk" value="checked"/>
 
                             </c:if>
                                 
-
+ --%>
     								
     								
     
@@ -197,7 +308,7 @@
 	}
 	
 	</script>
-	
+	<%-- 
 						
 		                    
 		                </form>
@@ -206,7 +317,7 @@
             
             	</c:choose>
             	  
-            </section>
+            </section> --%>
            
             
             <!-- footer include -->

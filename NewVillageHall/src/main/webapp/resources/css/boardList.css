@@ -1,0 +1,238 @@
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
+  * {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+  }
+  
+  .body{
+  	height:auto;
+  }
+
+  .right-body{
+    height: auto;
+    margin:auto;
+  }
+
+/* a태그 공통 설정 */
+.right-body a{
+    text-decoration: none;
+    color : black;
+}
+
+.right-body a:hover{
+    text-decoration: underline;
+}
+
+#boardList{
+   display: flex;
+   
+    width: 800px;
+    height: auto;
+    margin-left: 50px;
+} 
+
+.boardListTable {
+    width: 100%;
+    margin:auto;
+  }
+  
+.boardListTable tr{
+  line-height: 2;
+}
+
+.boardListTable td{
+  text-align: center;
+}
+
+.boardListTable td a{
+  text-decoration: none;
+  color: black;
+}
+
+.boardListTable td a:hover{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+
+#categoryNo{
+		float: right;
+	margin-right: 50px;	
+	margin-bottom: 10px;
+}
+
+/* 페이지네이션(Pagination) */
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* letter-spacing : -2px; */
+}
+
+/* 현재 페이지 번호 */
+.pagination .current{
+    background-color: #55710f;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* FAQ 검색 창 */
+  
+.FAQ-text {
+  display: flex;
+  color:black;
+  margin-left: 150px;
+  color: black;
+  font-weight: 700;
+  font-size: x-large;
+
+}
+
+.FAQ-search-fieldset {
+  border: 2px solid #55710F ;
+  border-radius: 20px;
+  width: 600px;
+  margin-left: 150px;
+
+  display: flex;
+}
+
+#quickSearchArea {
+	display:flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+.quickSearchArea {
+	padding-left: 20px;
+}
+
+
+#search-query {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+
+  border: none;
+  outline: 0;
+
+  width: 92%;
+}
+
+#FAQ-search-btn {
+  width: 8%;
+
+  cursor: pointer;
+
+  font-size: 1.2em;
+  color: #333;
+  background-color: transparent;
+
+  border: 0;
+}
+
+/* FAQ 게시판 스타일*/
+
+.faqSection {
+	margin-left:50px;
+	width: 850px;
+
+}
+.icon{
+	float: right;
+	margin-right: 110px;
+}
+
+.FAQTitle {
+            height: 30px;
+            color: black;
+            margin: 16px 16px;
+            border-radius: 10px;
+            line-height: 30px;
+            cursor: pointer;
+            /* font-weight: 500; */
+            font-size: 20px;
+            	margin-bottom: 25px;
+            
+}
+
+
+div.contents {
+            display: none; /* 화면에서 보이지 않음 */
+            border-top: 2.5px solid lightgray;
+            height: 200px;
+            width: 750px;
+            padding: 40px;
+            font-size: 18px;
+}
+
+#boardSearch{
+ margin-bottom: 40px;
+}
+
+#faq-search-area{
+	display: flex;
+	margin:auto;
+  height: 25px;
+}
+
+#faq-search-btn{
+	  border: 0;
+	  border-radius: 5px;
+	  background-color: #55710f;
+	  color: white;
+	  
+	  font-size:12px;
+	  width: 50px;
+	  height: 25px;
+	  
+	  cursor: pointer;
+	
+} 
+
+#boardListOutBox{
+	width: 800px;
+    /* height: 595px; */
+    position: relative;
+}
+
+
+#boardWriteBtn{
+
+    margin: 20px 0 0 750px;    
+    text-decoration: none;
+    border: 0;
+    border-radius: 10px;
+    background-color: #55710f;
+    color: white;
+    font-size: 20px;
+    padding: 3px 10px;
+    width: 80px;
+
+}
+
+#updateBtn, #deleteBtn{
+	background-color: #55710f;
+    color : white;
+    border-radius: 5px;
+    border: 0;
+    width: 40px;
+    height: 25px;
+    float: right;
+    margin-right:10px;
+}

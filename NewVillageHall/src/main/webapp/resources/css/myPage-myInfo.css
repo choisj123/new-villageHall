@@ -1,0 +1,218 @@
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
+  * {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+  }
+
+
+.right-body {
+  flex-basis: 71%;
+
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+
+/* myInfoTab */
+div > .tab {
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: white;
+  /* padding: 10px; */
+}
+
+.tab > a {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: normal;
+  color: black;
+}
+
+.tab > a:hover {
+  background-color: #55710f;
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+.tabContent {
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-top: none;
+}
+
+
+.profile-image-area{
+    width: 150px;
+    height: 150px;
+	border : 1px solid #55710f;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position : relative;
+}
+
+/* 프로필 이미지 */
+#profile-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+/* 프로필 버튼 영역 */
+.profile-btn-area{
+    width: 230px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* 프로필 버튼 영역의 모든 자식 요소 */
+.profile-btn-area > *{
+    width: 80px;
+    height: 30px;
+
+    padding: 5px 5px;
+ 	border: 2px solid #55710f;
+ 	border-radius: 5px;
+    background-color: white;
+    font-size: 12px;
+    color: #55710f;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* 파일 선택 버튼 */
+#input-image{
+    display: none;
+}
+
+/* 변경하기 버튼 */
+.profile-btn-area > button{
+    background-color: #55710f;
+    color : white;
+    border-radius: 5px;
+    border: 0;
+}
+
+/* 프로필 이미지 삭제 버튼 */
+#delete-image{
+    position : absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#myInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+	
+}
+
+.myPage-row{
+    width: 500px;
+    height: 50px;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    border-bottom : 2px solid #ddd;
+}
+
+.myPage-row > *{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.myPage-row > label{
+    width: 35%;
+    color : #55710f;
+}
+
+.myPage-row > span{
+    width : 65%;
+}
+
+.myPage-row > input{
+    width: 100%;
+    height: 100%;
+    border : 0;
+    outline: 0;
+    font-weight: normal;
+}
+
+
+
+.myPage-row:focus-within{
+    border-bottom: 2px solid #55710f;
+}
+
+form[name="myPage-form"]{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#info-update-btn{
+	background-color: #55710f;
+    color : white;
+    border-radius: 5px;
+    border: 0;
+    
+    
+    width: 110px;
+    height: 33px;
+
+    padding: 5px 10px;
+ 	border: 2px solid #55710f;
+ 	border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    
+    margin-top: 30px;
+}
+
+#changePw{
+	margin-top: 80px;
+}
+
+
+/* 회원 탈퇴 약관 */
+#deleteUser-terms{
+    width : 500px;
+    height: 300px;
+    border : 1px solid black;
+    font-size : 16px;
+    
+    margin: 0;
+
+    /* 내용이 지정한 사이즈를 초과한 경우에 대한 속성 */
+    overflow : auto; /* 초과한 방향의 스크롤을 자동 생성 */
+    word-wrap: break-word;
+    white-space: normal;
+    text-overflow:clip
+}
+
+.info-title{
+    color : #55710f;
+    border : 0;
+}

@@ -1,0 +1,353 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
+  * {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+  }
+
+/*  overflow 속성 */
+.right-body {
+	/* overflow: auto; */
+}
+/* overflow 스크롤 숨기 */
+/* .right-body::-webkit-scrollbar {
+    display: none;
+}  */
+
+
+/* a태그 공통 설정 */
+.right-body a{
+    text-decoration: none;
+    color : black;
+}
+
+.right-body a:hover{
+    text-decoration: underline;
+}
+
+
+#commentContainer{
+	height:auto;
+	margin-top: 40px;
+}
+
+
+.profile-image-area{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+/*     margin-left: 10px;
+    margin-top: 5px; */
+
+}
+
+
+.profile-area{
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ .profile-img {
+	width : 100%;
+	height : 100%;
+	border-radius: 50%;
+	
+} 
+
+.commentDetail {
+	display: flex;
+	border-top: 1px solid #ccc;
+
+}
+
+
+.comment-userName{
+	text-align: center;
+	padding: auto;
+	font-size: 15px;
+}
+
+
+
+/* 프로필 이미지 영역 */
+.commentDetail > div:nth-of-type(1) {
+	flex-basis: 15%;
+	padding: 10px;
+}
+
+/* 댓글 내용 */
+.commentDetail > div:nth-of-type(2) {
+	flex-basis: 60%;
+	padding: 10px 0px 10px 0px; 
+}
+
+/* 댓글 날짜 */
+.commentDetail > div:nth-of-type(3) span:nth-of-type(1) {
+	font-size: smaller;
+  	color: #aaa;
+  	
+}
+
+/* 댓글 날짜 */
+.commentDetail > div:nth-of-type(3) {
+	flex-basis: 10%;
+	padding-top: 27px; 
+	
+}
+
+.commentDetail > div:nth-of-type(4) {
+	display:flex;	
+	flex-basis: 15%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+#updateCommentButton{
+	
+	background-color: #55710f;
+    color : white;
+    border-radius: 5px;
+    border: 0;
+    width: 40px;
+    height: 25px;
+	
+}
+
+#deleteCommentButton {
+	color: #55710f;
+	border: 1px solid #55710f;
+	border-radius: 5px;
+	width: 40px;
+    height: 25px;
+	
+	
+}
+
+.insertComment {
+	display: flex;
+	height: 70px;
+}
+
+.insertComment > div:nth-of-type(1) {
+	flex-basis:90%;
+	
+}
+
+#insertCommentBtn{
+	background-color: #55710f;
+    color : white;
+    border-radius: 5px;
+    border: 0;
+    width: 40px;
+    height: 25px;
+	
+	
+}
+
+
+#insertCommentContent {
+	width: 100%;
+	border-color:#ccc;
+	resize:none;
+	height:100%;
+}
+
+.insertComment > div:nth-of-type(2) {
+	flex-basis:10%;
+	
+}
+
+#insertCommentBtn {
+	width: 100%;
+	height:100%;
+}
+
+.saveCommentButton{
+		background-color: #55710f;
+    color : white;
+    border-radius: 5px;
+    border: 0;
+    width: 40px;
+    height: 25px;
+	
+}
+
+.cancelCommentButton{
+		background-color: #ddd;
+    color : #55710f;
+    border-radius: 5px;
+    border: 0;
+    width: 40px;
+    height: 25px;
+}
+
+.btn-area{
+	width: 100px;
+	margin-left: 560px;
+}
+
+
+	
+/* 페이지네이션(Pagination) */
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* letter-spacing : -2px; */
+}
+
+/* 현재 페이지 번호 */
+.pagination .current{
+    background-color: #55710f;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}	
+
+
+
+
+/* 보드 디테일 */
+.boardContainer{
+	margin:auto;
+}
+.boardBox{
+	border: 1px solid  rgba(32, 33, 36, .28);
+	border-radius: 5px;
+	width: auto;
+	min-height: 800px;
+	height: auto;
+	padding: 6px 6px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin:auto;
+	
+}
+.boardBox div {
+	/* border: 1px solid  rgba(32, 33, 36, .28); */
+	/* border-radius: 5px; */
+	/* margin: 5px 5px 5px 5px; */
+}
+.boardBoxHeader{
+	
+	flex-basis: 10%;
+	text-align: left;
+	font-size: 15px;
+	font-weight: 500;
+    padding: 40px 0 0 50px;
+    color: #55710F;
+    /* line-height: 62px; */
+    /* border-bottom: 1px dotted #ddd; */
+	
+}
+.boardBoxTitle{
+	
+	flex-basis: 12% ;
+	border-radius: 5px;
+	/* line-height: 75px; */
+    color: black;
+	font-weight: 500;
+	font-size: 32px;
+	text-align:left;
+	padding-left: 50px;
+	/* border-bottom: 1px dotted #ddd; */
+}
+
+
+.boardBoxEtc{
+	flex-basis: 8%;
+	display: flex;
+	font-weight: 100;
+    font-size: 15px;
+    padding: 20px 50px 0 20px;
+}
+.boardBoxEtc :nth-of-type(1){
+	flex-basis: 25%;
+}
+.boardBoxEtc :nth-of-type(2){
+	flex-basis: 50%;
+}
+.boardBoxEtc :nth-of-type(3){
+	flex-basis: 15%;
+}
+.boardBoxEtc :nth-of-type(4){
+	flex-basis: 10%;
+}
+.boardBoxContent{
+	border-top: 3px solid 55710F;
+	flex-basis: 70%;
+	padding: 20px 10px 10px 50px;
+	text-align: left;
+	
+}
+
+
+.boardBoxContent > img{
+	height:100%;
+	width:100%;
+	text-align: center;
+	
+}
+
+.board-btn-area{
+	float: right;
+	margin-right: 10px;	
+	margin-top: 15px;
+}
+
+#like{
+	float: left;
+	margin-left: 10px;	
+	margin-top: 15px;
+	text-decoration: none;
+	cursor: pointer;
+	
+}
+
+#updateBtn{
+	background-color: #55710f;
+    color : white;
+    border-radius: 5px;
+    border: 0;
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+    margin-right: 10px;
+	
+}
+
+#deleteBtn{
+	background-color: #55710f;
+    color : white;
+    border-radius: 5px;
+    border: 0;
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+	
+	
+}
+
+
+
+
+/* **************** */
+
+
