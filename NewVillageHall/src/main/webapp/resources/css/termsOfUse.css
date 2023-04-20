@@ -1,0 +1,91 @@
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
+  * {
+     font-family: 'IBM Plex Sans KR', sans-serif;
+     color:rgb(31, 30, 30);
+    
+  }
+  
+#logo{
+	
+	width: 120px;
+    height: 100px;
+    margin-left: 720px;
+    
+}
+
+.terms-of-use-area{
+
+    width: 900px;
+    padding-left: 170px;
+   	margin-left: 350px;
+    border: none;
+   
+}
+
+.villageHall{
+    color: #55710F;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    padding-left: 200px;
+}
+
+
+
+#table{
+
+border:1px solid lightgray;
+
+}
+
+
+.td{
+    
+    width:200px;
+    height: 50px;
+    font-size: small;
+    text-align: center;
+    
+}
+
+.tdCheck{
+	
+	 align-items: center;
+}
+
+.th{
+    background-color: rgb(240, 244, 240);
+}
+
+.td1{
+    background-color: rgb(240, 244, 240);
+}
+
+
+#nextBtn{
+    width: 300px;
+    height: 50px;
+    background-color: #55710F;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-left:110px;
+    
+}
+
+#kakao-btn{
+	
+	margin-left:110px;
+	margin-bottom:100px;
+	
+}
+
+.p{
+	font-size: 12px;
+	color:gray;
+}
+

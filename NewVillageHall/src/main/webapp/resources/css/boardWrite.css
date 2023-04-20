@@ -1,0 +1,25 @@
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
+  * {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+  }
+
+#title {
+  border: 1px solid #55710f;
+  border-radius: 3px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+#saveBtn {
+  cursor: pointer;
+  background-color: #55710f;
+  border-radius: 3px;
+  color: white;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  float: right;
+}
+
+#summernote {
+  border: 1px solid #55710f;
+}

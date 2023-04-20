@@ -1,0 +1,122 @@
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
+  * {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+  }
+
+/* a태그 공통 설정 */
+.right-body a{
+    text-decoration: none;
+    color : black;
+}
+
+.right-body a:hover{
+    text-decoration: underline;
+}
+
+
+.right-body > h3 {
+  padding: 5px 15px 15px 10px;
+
+  flex-basis: 15px;
+}
+
+div > .tab {
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: white;
+  /* padding: 10px; */
+}
+
+.tab > a {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: normal;
+  color: black;
+}
+
+.tab > a:hover {
+  background-color: #55710f;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+
+.tabContent {
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-top: none;
+}
+
+.contentTable,
+.commentTable,
+.likeTable {
+  width: 100%;
+}
+
+.contentTable tr,
+.likeTable tr {
+  line-height: 2;
+}
+
+.contentTable td,
+.likeTable td {
+  text-align: center;
+}
+
+.contentTable td a,
+.commentTable td a,
+.likeTable td a {
+  text-decoration: none;
+  color: black;
+}
+
+.contentTable td a:hover,
+.commentTable td a:hover,
+.likeTable td a:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.commentTable span:nth-of-type(2),
+.commentTable span:nth-of-type(3) {
+  font-size: smaller;
+  color: #aaa;
+}
+
+/* 페이지네이션(Pagination) */
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* letter-spacing : -2px; */
+}
+
+/* 현재 페이지 번호 */
+.pagination .current{
+    background-color: #55710f;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}

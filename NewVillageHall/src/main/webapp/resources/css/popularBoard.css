@@ -1,0 +1,41 @@
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
+  * {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+  }
+  
+#popularBoard{
+    /* padding: 6px 12px;  */
+    border: 1px solid white;
+    width: 800px;
+    height: auto;
+    margin-left: 50px;
+
+}
+
+.popularBoardTable {
+    width: 100%;
+  }
+  
+.popularBoardTable tr{
+  line-height: 2;
+}
+
+.popularBoardTable td{
+  text-align: center;
+}
+
+.popularBoardTable td a{
+  text-decoration: none;
+  color: black;
+}
+
+.popularBoardTable td a:hover{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+#sortBySelect{
+	float: right;
+	margin-right: 50px;	
+	margin-bottom: 10px;
+}

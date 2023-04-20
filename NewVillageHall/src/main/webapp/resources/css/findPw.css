@@ -1,0 +1,124 @@
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap');
+  * {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+  }
+
+.confirm{ color : green;}
+.error{  color : red;  }
+
+#logo{
+	
+	width: 120px;
+    height: 100px;
+    margin-left: 425%;
+    
+}
+
+.main{
+	
+	display: flex;
+    justify-content: center;
+    
+	
+}
+
+#pwFind-field {
+	height: 700px;
+	width:450px;
+	border: 1px solid lightgray;
+	margin-top: 60px;
+	margin-bottom: 300px;
+	margin-left:350px;
+}
+
+.pwFind-message{
+    font-size: 12px;
+    letter-spacing: -1px; /* 자간 */
+}
+
+.pwFind-content{
+	
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.pwFind{
+
+    display: flex;
+    font-size: 17px;
+    padding-top:50px;
+    
+    
+}
+
+.pwFind > span{
+    color:red;
+    padding : 0 5px;
+}
+
+.pwText{
+    
+    font-size : 30px;
+    font-weight: bold;
+    color:#55710F;
+    margin-top: 70px;
+    padding-bottom: 10px;
+   
+}
+
+
+.pwFind-input-area > input{
+
+    width: 350px;
+    height: 40px;
+    background-color: rgb(240, 244, 240);
+    border: 5px solid rgb(240, 244, 240);
+    margin-bottom: 8px;
+    border-radius: 5px;
+    outline-color: forestgreen;
+
+}
+
+
+
+
+#userEmail, #cNumber{
+    width: 280px;
+    height: 40px;
+}
+
+
+
+
+#sendBtn, #cBtn {
+    height: 40px;
+    background-color: #55710F;
+    border : 1px solid gray;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    
+
+}
+
+.pwFind-message{
+    font-size: small;
+    display:flex;
+    padding-left:15px;
+
+}
+
+
+#info-update-btn{
+    background-color: #55710F;
+    height: 40px;
+    width: 360px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border : 1px solid  gray;
+}
+
+

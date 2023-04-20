@@ -1,0 +1,419 @@
+/*  .right-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 10px 30px;
+}
+
+.right-body :nth-child(1) {
+  flex-basis: 50%;
+}
+.right-body :nth-child(2) {
+  flex-basis: 25%;
+}
+.right-body :nth-child(3) {
+  flex-basis: 25%;
+} 
+ */
+/* ************ 지도 API SECTION 가급적 건들지 말아주세요 ㅠㅠㅠ ************* */
+
+@media only screen and (max-width: 1020px) {
+  /* 기본 스타일 */
+  header {
+    display: flex;
+    border: none;
+    height: 8vh;
+    justify-content: space-between;
+  }
+
+  header section:nth-of-type(1) {
+    margin-left: 100px;
+    border: none;
+  }
+
+  #home-logo {
+    margin-left: 120px;
+    height: 10vh;
+    max-width: 500px;
+  }
+
+  .search-area {
+    align-items: center;
+    padding-left: 15px;
+    width: 90%;
+    height: 8vh;
+    max-width: 500px;
+  }
+
+  fieldset {
+    position: relative;
+    width: 100%;
+    height: 8vh;
+  }
+
+  #query {
+    width: 100%;
+    padding-right: 60px;
+  }
+
+  #search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+  }
+
+  .login-signup-area {
+    width: 100%;
+    height: 8vh;
+    margin-right: 150px;
+    flex: auto;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+#map {
+  position: relative;
+}
+.spin-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-10x {
+  animation: spin 3s linear infinite;
+  width: 80px;
+  height: 80px;
+}
+
+.map-nav {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3; /* 검색 폼이 지도 위에 나타나도록 z-index 값 조정 */
+  width: 200px;
+  height: 480px;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+#placesList {
+  padding-left: 5px;
+}
+
+#placesList > li {
+  list-style-type: none;
+}
+
+#categorySelect {
+  padding-left: 200px;
+  padding-bottom: 10px;
+}
+
+#categorySelect label {
+  margin-right: 20px;
+  color: #55710f;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* 핀게시글 */
+
+.infowindow-contaioner {
+  border: none;
+  /*   border-radius: 15px;
+  background-color: red; */
+}
+
+.infowindow-header {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  height: 60px;
+}
+
+/* 핀게시글 헤더  왼쪽 */
+.inwi-left {
+  border: none;
+  flex-basis: 20%;
+  padding: 5px 0px 0px 10px;
+}
+.map-profile-area {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #55710f;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.profile {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* 핀게시글 헤더 오른쪽 */
+
+.inwi-right {
+  flex-basis: 80%;
+  width: 50px;
+  height: auto;
+  padding: 10px 5px 3px 5px;
+}
+
+.inwi-right > div:nth-of-type(1) {
+  height: 30%;
+  margin-left: 5px;
+}
+.inwi-right > div:nth-of-type(2) {
+  height: 40%;
+  margin-left: 5px;
+}
+.inwi-right > div:nth-of-type(3) {
+  height: 30%;
+  margin-left: 5px;
+}
+
+.category {
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+.time {
+  text-align: end;
+  font-size: 13px;
+  padding-right: 10px;
+}
+
+/* 핀게시글 내용 */
+
+.infowindow-content {
+  border-bottom: 1px solid black;
+  height: 150px;
+  width: 300px;
+  padding: 5px 0px 0px 5px;
+}
+
+.info-title {
+  padding: 5px 0 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.info-content {
+  padding: 5px 0 0 5px;
+}
+
+/* 핀게시글 푸터  */
+.infowindow-footer {
+  border: none;
+  height: 50px;
+  width: 300px;
+  padding: 5px 0px 0px 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.info-like {
+  flex-basis: 13%;
+}
+.info-count {
+  flex-basis: 20%;
+  font-size: 14px;
+}
+
+.option {
+  margin-left: 20px;
+}
+
+.move {
+  flex-basis: 57%;
+  margin-left: 45px;
+  font-size: 14px;
+}
+
+/* 핀게시글 리스트 */
+.listCategory {
+  text-align: center;
+  font-size: 12px;
+}
+
+.listTitle {
+  text-align: center;
+  font-weight: bold;
+}
+
+.listCreateDate {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* 커스텀 오버레이 스타일링 */
+.overlay {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+}
+
+.overlay .overlay_close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.overlay .overlay_content {
+  margin-top: 20px;
+}
+
+.customoverlay {
+  position: relative;
+  bottom: 45px;
+  border-radius: 6px;
+  border: 1px solid black;
+  border-bottom: none;
+  background: #fff;
+  width: 200px;
+  padding: 5px;
+}
+.customoverlay:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 0;
+  height: 0;
+  margin-left: -9px;
+  border-top: 10px solid #ccc;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+/* ************여기까지 지도 API SECTION 가급적 건들지 말아주세요 ㅠ퓨ㅠ**************/
+
+.map {
+  height: 40%;
+  border: 1px solid rgb(207, 41, 41);
+
+  height: 50%;
+}
+
+.notice-fave {
+  justify-content: space-around;
+  height: 30%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+
+  padding-top: 50px;
+
+  flex-basis: 30%;
+}
+
+.notice-box {
+  /* margin-right: 100px; */
+  /* border: 1px solid #55710f; */
+  width: 330px;
+  /* height: 280px; */
+}
+
+#link {
+  float: right;
+}
+
+#noticeTbody {
+  text-align: left;
+  padding-top: 5px;
+}
+
+.fave-box {
+  /* border: 1px solid #55710f; */
+  width: 330px;
+  /* height: 280px; */
+}
+
+fave-content tbody td,
+notice-content tbody td {
+  text-align: left;
+}
+
+#popularTbody {
+  text-align: left;
+  padding-top: 5px;
+}
+
+.notice-box > :nth-of-type(2) {
+  border: none;
+}
+
+.fave-box > :nth-of-type(2) {
+  border: none;
+}
+
+.notice-content,
+.fave-content {
+  margin: auto;
+  font-size: 15px;
+}
+
+.notice-fave p {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #55710f;
+  text-align: left;
+  padding: 3px 0px 3px 20px;
+  margin: 0px;
+}
+
+.notice {
+  height: 100%;
+}
+
+.fave {
+  height: 100%;
+}
+
+/* a태그 공통 설정 */
+.right-body a {
+  text-decoration: none;
+  color: black;
+}
+
+.right-body a:hover {
+  text-decoration: underline;
+}
+
+.weather {
+/* 	padding-top: 50px; */
+  flex-basis: 20%;
+}
+
+.right-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  flex-basis: 50%;
+}
