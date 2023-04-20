@@ -15,6 +15,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마을회관</title>
+	
+	  <!-- Vendor CSS Files -->
+  <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="resources/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="resources/vendor/aos/aos.css" rel="stylesheet">
+  <link href="resources/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
 
     <link
     rel="stylesheet"
@@ -329,5 +338,25 @@
       <!-- main.js 연결 -->
       <!-- <script src="${pageContext.request.contextPath}/resources/js/main.js"></script> -->
 		<script src="${contextPath}/resources/js/board.js"></script>
+		
+		  <!-- Vendor JS Files -->
+  <script src="${contextPath}/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="${contextPath}/resources/vendor/aos/aos.js"></script>
+  <script src="${contextPath}/resources/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="${contextPath}/resources/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="${contextPath}/resources/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="${contextPath}/resources/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="${contextPath}/resources/vendor/php-email-form/validate.js"></script>
+
+
+	<!-- jQuery 라이브러리 추가 -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    
+  <!-- Template Main JS File -->
+  <script src="${contextPath}/resources/js/main.js"></script>
 </body>
 </html>

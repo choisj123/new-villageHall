@@ -85,7 +85,6 @@
 	          			</c:when>
 	          			<c:otherwise>
 	          				<c:forEach var="comment" items="${commentList}">
-	          					
 	          					<div class="commentDetail" id="commentDetail-${comment.commentNo}">	          						
 	          						<div class="profile-area">
 	          							<div class="profile-image-area">
